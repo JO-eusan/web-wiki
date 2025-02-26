@@ -85,6 +85,7 @@ section,
 article {
   display: flex;
   flex-flow: column;
+  margin-top: 15px;
 }
 
 div.thumbnail {
