@@ -131,18 +131,29 @@ aside.right-sidebar nav {
   padding: var(--right-sidebar-padding);
 }
 
-ol.contents {
-  list-style-type: decimal;
-  padding: 24px;
+.comment-writing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 }
 
-ol.contents li:not(:last-child) {
-  margin-bottom: 16px;
+.comment-item {
+  border: 1px solid #ddd; 
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px; 
+  background-color: #f9f9f9; 
 }
 
-ol.contents li a {
-  text-decoration: none;
-  color: var(--font-default-color);
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-content {
+  font-size: 14px;
+  color: #333;
 }
 
 footer {
