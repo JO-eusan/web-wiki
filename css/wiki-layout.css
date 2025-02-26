@@ -33,6 +33,11 @@ h1.logo {
   align-items: center;
 }
 
+.logo-img {
+  max-width: 100%; 
+  height: auto; 
+}
+
 h1.logo span.text {
   padding: 16px;
   font-size: 1.8rem;
@@ -73,6 +78,20 @@ div.thumbnail {
   display: flex;
   justify-content: center;
   margin-bottom: var(--page-paragraph-margin-y);
+}
+
+div.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px; 
+  width: 300px; 
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 section::after {
