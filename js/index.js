@@ -16,4 +16,43 @@ console.log(
   "color: #d81b60; font-size: 16px; font-weight: bold;"
 );
 
-console.log("알맞은 스크립트를 작성하세요");
+document.addEventListener("DOMContentLoaded", function () {
+  const commentInput = document.getElementById("comment-input");
+  const submitButton = document.getElementById("submit-comment");
+  const commentList = document.getElementById("comment-list");
+
+  function addComment() {
+    const commentText = commentInput.value.trim();
+
+    if (commentText === "") {
+      alert("댓글을 입력해주세요!");
+      return;
+    }
+
+    const commentItem = document.createElement("li");
+    commentItem.innerHTML = `
+      <div class="comment-item">
+        <div class="comment-author">
+          <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+          <span>방문자</span>
+        </div>
+        <div class="comment-content">${commentText}</div>
+      </div>
+    `;
+
+    commentList.appendChild(commentItem);
+
+    commentInput.value = "";
+
+    alert("댓글이 등록되었습니다.");
+  }
+
+  submitButton.addEventListener("click", addComment);
+
+  commentInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      addComment();
+    }
+  });
+});
