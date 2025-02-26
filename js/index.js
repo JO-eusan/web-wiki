@@ -23,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addComment() {
     const commentText = commentInput.value.trim();
-
-    if (commentText === "") {
-      alert("댓글을 입력해주세요!");
-      return;
-    }
-
     const commentItem = document.createElement("li");
     commentItem.innerHTML = `
       <div class="comment-item">
